@@ -1,0 +1,18 @@
+# Ignorar ambiente virtual
+yolov8_env/
+
+# Ignorar pesos de modelo grandes
+*.pt
+
+# Ignorar caches do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorar arquivos de pacotes pesados
+*.dll
+*.lib
+
+# Ignorar arquivos de imagens grandes (se quiser)
+*.png
