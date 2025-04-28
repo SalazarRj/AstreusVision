@@ -1,18 +1,36 @@
-# Ignorar ambiente virtual
+# Ignore ambiente virtual
 yolov8_env/
+venv/
+.env/
+*.env
 
-# Ignorar pesos de modelo grandes
-*.pt
-
-# Ignorar caches do Python
+# Arquivos de cache do Python
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
 
-# Ignorar arquivos de pacotes pesados
+# Arquivos de log
+*.log
+
+# Modelos treinados e grandes arquivos de pesos
+*.pt
+*.pth
+
+# Arquivos grandes de bibliotecas
 *.dll
+*.so
+*.dylib
 *.lib
 
-# Ignorar arquivos de imagens grandes (se quiser)
+# Imagens de teste
 *.png
+*.jpg
+*.jpeg
+
+# Pastas de execução do YOLO
+runs/
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.bak
+*.swp
