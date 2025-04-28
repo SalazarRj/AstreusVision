@@ -1,0 +1,75 @@
+certifi==2025.4.26
+chardet==3.0.4
+charset-normalizer==3.4.1
+colorama==0.4.6
+contourpy==1.3.2
+cycler==0.12.1
+deep-sort-realtime==1.3.2
+filelock==3.18.0
+fonttools==4.57.0# No code was selected, so we'll create a basic Python script to manage dependencies
+
+import pkg_resources
+
+def get_dependencies():
+    dependencies = []
+    with open('requirements.txt', 'r') as f:
+        for line in f:
+            dependencies.append(line.strip())
+    return dependencies
+
+def check_dependencies():
+    dependencies = get_dependencies()
+    for dependency in dependencies:
+        try:
+            pkg_resources.require(dependency)
+            print(f"{dependency} is installed and up-to-date.")
+        except pkg_resources.DistributionNotFound:
+            print(f"{dependency} is not installed.")
+        except pkg_resources.VersionConflict:
+            print(f"{dependency} is installed but the version is not compatible.")
+
+if __name__ == "__main__":
+    check_dependencies()
+fsspec==2025.3.2
+googletrans==4.0.0rc1
+h11==0.9.0
+h2==3.2.0
+hpack==3.0.0
+hstspreload==2025.1.1
+httpcore==0.9.1
+httpx==0.13.3
+hyperframe==5.2.0
+idna==2.10
+Jinja2==3.1.6
+kiwisolver==1.4.8
+MarkupSafe==3.0.2
+matplotlib==3.10.1
+mpmath==1.3.0
+mss==10.0.0
+networkx==3.4.2
+numpy==2.2.5
+opencv-python==4.11.0.86
+packaging==25.0
+pandas==2.2.3
+pillow==11.2.1
+psutil==7.0.0
+py-cpuinfo==9.0.0
+pyparsing==3.2.3
+python-dateutil==2.9.0.post0
+pytz==2025.2
+PyYAML==6.0.2
+requests==2.32.3
+rfc3986==1.5.0
+scipy==1.15.2
+seaborn==0.13.2
+six==1.17.0
+sniffio==1.3.1
+sympy==1.14.0
+torch==2.7.0
+torchvision==0.22.0
+tqdm==4.67.1
+typing_extensions==4.13.2
+tzdata==2025.2
+ultralytics==8.3.119
+ultralytics-thop==2.0.14
+urllib3==2.4.0
